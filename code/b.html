@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title></title>
+</head>
+<body>
+姓名:{$name}
+<hr>
+student:{$student[0]}{$student.1}<br>
+zhangsan:{$zhangsan['name']}{$zhangsan.age}<br>
+teacher:{$teacher->name}{$teacher->sex}<br>
+user:{$user->getname()}
+<hr>
+smarty.get:id  {$smarty.get.id}
+<hr>
+打印当前日期和时间{date('Y-m-d H:i:s',time())}
+<hr>
+if else:
+{if $zhangsan.age > 20}
+张三大于20岁
+{elseif $zhangsan.age == 20 }
+张三等于20
+{else}
+张三小于20
+{/if}
+<hr>
+{for $i=1 to 10 step 3}
+{$i}
+{forelse}
+不能循环
+{/for}
+<hr>
+{foreach $student as $k=>$v}
+{$v}
+{foreachelse}
+没有数据
+{/foreach}
+</body>
+</html>

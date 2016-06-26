@@ -1,0 +1,13 @@
+{extends file="test2.html"}
+{block name="content"}
+姓名:{$name}
+年龄:{$age}<h3>这是h3</h3>
+{/block}
+
+{block name="footer"}
+<hr>
+{time()|date_format:"%Y-%m-%d %H:%M:%S"}
+<h2>这里是test1的 footer</h2>
+</body>
+</html>
+{/block}
